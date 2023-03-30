@@ -35,12 +35,26 @@ $_SESSION['courses'] = $course;
 $_SESSION['students'] = $students;
 ?>
 
-<!-- display the course and student details -->
-<h2><?= $course['course_name'] ?></h2>
-<p>Professor: <?= $course['professor'] ?></p>
-<h3>Students</h3>
-<ul>
-  <?php foreach ($students as $student): ?>
-    <li><?= $student['sfname'] ?> <?= $student['slname'] ?></li>
-  <?php endforeach; ?>
-</ul>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class</title>
+    <link rel="stylesheet" type="text/css" href="class_detail.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- display the course and student details -->
+      <h2><?= $course['course_name'] ?></h2>
+      <p>Professor: <?= $course['professor'] ?></p>
+      <h3>Students</h3>
+      <ul>
+        <?php foreach ($students as $student): ?>
+          <li><?= $student['sfname'] ?> <?= $student['slname'] ?></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+    
+  </body>
+</html>
