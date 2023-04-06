@@ -51,7 +51,10 @@ $_SESSION['students'] = $students;
       <h3>Students</h3>
       <ul>
         <?php foreach ($students as $student): ?>
-          <li><?= $student['sfname'] ?> <?= $student['slname'] ?></li>
+          <li>
+            <p><?= $student['sfname'] ?> <?= $student['slname'] ?></p>
+            <p class="grade">Grade: </p>
+          </li>
         <?php endforeach; ?>
       </ul>
     </div>
